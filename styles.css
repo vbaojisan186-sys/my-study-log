@@ -249,6 +249,12 @@ textarea:focus {
   font-size: 0.82rem;
 }
 
+.note-hint {
+  margin: -6px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .action-row {
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -512,38 +518,122 @@ textarea:focus {
 }
 
 @media (max-width: 560px) {
+  .app-shell {
+    gap: 10px;
+    padding: 8px 0 16px;
+  }
+
   .editor-panel,
   .history-panel {
-    padding: 18px;
+    padding: 14px;
   }
 
   .brand-row,
-  .history-header,
-  .list-tools {
+  .history-header {
     align-items: stretch;
-    flex-direction: column;
+    margin-bottom: 12px;
   }
 
   .save-state,
   .stats-strip {
     align-self: flex-start;
+    min-height: 36px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .diary-form {
+    gap: 8px;
+  }
+
+  .mood-field {
+    margin-top: 0;
   }
 
   .mood-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 4px;
+    margin-top: 6px;
   }
 
   .mood-option {
-    min-height: 76px;
+    min-height: 56px;
+    gap: 2px;
+    padding: 3px 1px;
+    font-size: 0.65rem;
+    overflow-wrap: anywhere;
   }
 
-  .list-tools select {
-    flex-basis: auto;
+  .mood-face {
+    font-size: 1.25rem;
+  }
+
+  textarea {
+    height: 76px;
+    min-height: 76px;
+    padding: 8px;
+  }
+
+  .note-hint {
+    font-size: 0.7rem;
+  }
+
+  .action-row {
+    gap: 6px;
+    margin-top: 2px;
   }
 
   .primary-button,
   .ghost-button {
-    flex: 1 1 150px;
+    min-height: 40px;
+    padding: 0 10px;
+    flex: 1 1 auto;
+  }
+
+  .biorhythm,
+  .summary-row {
+    display: none;
+  }
+
+  .list-tools {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .list-tools select {
+    flex: 0 0 132px;
+    min-height: 40px;
+    padding: 0 8px;
+    font-size: 0.82rem;
+  }
+
+  .search-box input {
+    min-height: 40px;
+    padding: 0 8px;
+    font-size: 0.82rem;
+  }
+
+  .empty-state,
+  .entry-card {
+    padding: 12px;
+  }
+
+  .entry-list {
+    gap: 8px;
+  }
+
+  .entry-card {
+    gap: 8px;
+  }
+
+  .entry-actions button {
+    min-height: 34px;
   }
 }
     
